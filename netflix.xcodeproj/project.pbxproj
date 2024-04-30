@@ -14,6 +14,15 @@
 		B08053852BE01FC10019DE38 /* NetflixHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053842BE01FC10019DE38 /* NetflixHomeView.swift */; };
 		B08053872BE021390019DE38 /* NetflixFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053862BE021390019DE38 /* NetflixFilterCell.swift */; };
 		B08053892BE022B00019DE38 /* NetflixFilterBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053882BE022B00019DE38 /* NetflixFilterBarView.swift */; };
+		B080538B2BE166CC0019DE38 /* NetflixHeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080538A2BE166CC0019DE38 /* NetflixHeroCell.swift */; };
+		B08053902BE1678A0019DE38 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080538F2BE1678A0019DE38 /* Constants.swift */; };
+		B08053922BE168860019DE38 /* ImageLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053912BE168860019DE38 /* ImageLoaderView.swift */; };
+		B08053952BE168DD0019DE38 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = B08053942BE168DD0019DE38 /* SDWebImageSwiftUI */; };
+		B080539B2BE16E0C0019DE38 /* SwiftfulUI in Frameworks */ = {isa = PBXBuildFile; productRef = B080539A2BE16E0C0019DE38 /* SwiftfulUI */; };
+		B080539D2BE1724C0019DE38 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080539C2BE1724C0019DE38 /* Product.swift */; };
+		B080539F2BE174290019DE38 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B080539E2BE174290019DE38 /* User.swift */; };
+		B08053A12BE174590019DE38 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053A02BE174590019DE38 /* DatabaseHelper.swift */; };
+		B08053A32BE174930019DE38 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08053A22BE174920019DE38 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +34,13 @@
 		B08053842BE01FC10019DE38 /* NetflixHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixHomeView.swift; sourceTree = "<group>"; };
 		B08053862BE021390019DE38 /* NetflixFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixFilterCell.swift; sourceTree = "<group>"; };
 		B08053882BE022B00019DE38 /* NetflixFilterBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixFilterBarView.swift; sourceTree = "<group>"; };
+		B080538A2BE166CC0019DE38 /* NetflixHeroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixHeroCell.swift; sourceTree = "<group>"; };
+		B080538F2BE1678A0019DE38 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B08053912BE168860019DE38 /* ImageLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderView.swift; sourceTree = "<group>"; };
+		B080539C2BE1724C0019DE38 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		B080539E2BE174290019DE38 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B08053A02BE174590019DE38 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
+		B08053A22BE174920019DE38 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B080539B2BE16E0C0019DE38 /* SwiftfulUI in Frameworks */,
+				B08053952BE168DD0019DE38 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +75,7 @@
 		B08053712BE01E630019DE38 /* netflix */ = {
 			isa = PBXGroup;
 			children = (
+				B080538E2BE1677D0019DE38 /* utilities */,
 				B08053812BE01F880019DE38 /* Components */,
 				B08053802BE01F7F0019DE38 /* Core */,
 				B08053722BE01E630019DE38 /* netflixApp.swift */,
@@ -88,8 +107,22 @@
 			children = (
 				B08053862BE021390019DE38 /* NetflixFilterCell.swift */,
 				B08053882BE022B00019DE38 /* NetflixFilterBarView.swift */,
+				B080538A2BE166CC0019DE38 /* NetflixHeroCell.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		B080538E2BE1677D0019DE38 /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B080538F2BE1678A0019DE38 /* Constants.swift */,
+				B08053912BE168860019DE38 /* ImageLoaderView.swift */,
+				B080539C2BE1724C0019DE38 /* Product.swift */,
+				B080539E2BE174290019DE38 /* User.swift */,
+				B08053A02BE174590019DE38 /* DatabaseHelper.swift */,
+				B08053A22BE174920019DE38 /* Category.swift */,
+			);
+			path = utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +141,10 @@
 			dependencies = (
 			);
 			name = netflix;
+			packageProductDependencies = (
+				B08053942BE168DD0019DE38 /* SDWebImageSwiftUI */,
+				B080539A2BE16E0C0019DE38 /* SwiftfulUI */,
+			);
 			productName = netflix;
 			productReference = B080536F2BE01E630019DE38 /* netflix.app */;
 			productType = "com.apple.product-type.application";
@@ -136,6 +173,10 @@
 				Base,
 			);
 			mainGroup = B08053662BE01E630019DE38;
+			packageReferences = (
+				B08053932BE168DD0019DE38 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				B08053992BE16E0C0019DE38 /* XCRemoteSwiftPackageReference "SwiftfulUI" */,
+			);
 			productRefGroup = B08053702BE01E630019DE38 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -164,9 +205,16 @@
 			files = (
 				B08053892BE022B00019DE38 /* NetflixFilterBarView.swift in Sources */,
 				B08053752BE01E630019DE38 /* ContentView.swift in Sources */,
+				B080539D2BE1724C0019DE38 /* Product.swift in Sources */,
+				B08053A12BE174590019DE38 /* DatabaseHelper.swift in Sources */,
+				B080538B2BE166CC0019DE38 /* NetflixHeroCell.swift in Sources */,
 				B08053732BE01E630019DE38 /* netflixApp.swift in Sources */,
+				B08053902BE1678A0019DE38 /* Constants.swift in Sources */,
+				B08053922BE168860019DE38 /* ImageLoaderView.swift in Sources */,
 				B08053872BE021390019DE38 /* NetflixFilterCell.swift in Sources */,
+				B080539F2BE174290019DE38 /* User.swift in Sources */,
 				B08053852BE01FC10019DE38 /* NetflixHomeView.swift in Sources */,
+				B08053A32BE174930019DE38 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +420,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B08053932BE168DD0019DE38 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.4;
+			};
+		};
+		B08053992BE16E0C0019DE38 /* XCRemoteSwiftPackageReference "SwiftfulUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B08053942BE168DD0019DE38 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B08053932BE168DD0019DE38 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		B080539A2BE16E0C0019DE38 /* SwiftfulUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B08053992BE16E0C0019DE38 /* XCRemoteSwiftPackageReference "SwiftfulUI" */;
+			productName = SwiftfulUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B08053672BE01E630019DE38 /* Project object */;
 }
