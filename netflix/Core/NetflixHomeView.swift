@@ -7,8 +7,11 @@
 
 import SwiftUI
 import SwiftfulUI
+import SwiftfulRouting
 
 struct NetflixHomeView: View {
+    
+    @Environment(\.router) var router
     
     @State private var filters = FilterModel.mockArray
     @State private var selectedFilter : FilterModel? = nil
@@ -62,6 +65,9 @@ struct NetflixHomeView: View {
             Text("For You")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .font(.title)
+                .onTapGesture {
+                    router.dismissScreen()
+                }
             
             HStack(spacing: 16){
                 Image(systemName: "tv.badge.wifi")
@@ -78,13 +84,21 @@ struct NetflixHomeView: View {
         }
     }
     
+    private func onProductPressed(product : Product) {
+        router.showScreen(.sheet) { _ in
+            NetflixDetailsView(product: product)
+        }
+    }
+    
     private func heroCellData(product : Product) -> some View {
         NetflixHeroCell(
             imageName: product.firstImage,
             isNetflixFilm: true,
             title: product.title,
             categories: [product.category.capitalized, product.brand],
-            onBackgroundPressed: {},
+            onBackgroundPressed: {
+                onProductPressed(product: product)
+            },
             onPlayPressed: {},
             onMyListPressed: {}
         )
@@ -108,6 +122,9 @@ struct NetflixHomeView: View {
                                     isRecentlyAdded: product.recentlyAdded,
                                     topTenRaking: rowIndex == 0 ? (index + 1) : nil
                                 )
+                                .onTapGesture {
+                                    onProductPressed(product: product)
+                                }
                             }
                         }
                         .padding(.leading, 16)
@@ -211,5 +228,7 @@ struct NetflixHomeView: View {
 }
 
 #Preview {
-    NetflixHomeView()
+    RouterView { _ in
+        NetflixHomeView()
+    }
 }

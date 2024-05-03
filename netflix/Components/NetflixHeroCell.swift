@@ -79,7 +79,7 @@ struct NetflixHeroCell: View {
                     .background(.netflixDarkGray)
                     .cornerRadius(4)
                     .asButton(.press) {
-                        onPlayPressed?()
+                        onMyListPressed?()
                     }
                 }
                 .font(.callout)
